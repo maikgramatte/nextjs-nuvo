@@ -1,0 +1,143 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: $primary;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .49);
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: all .4s ease-in-out;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  > div {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .row {
+      margin: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding-right: 15px;
+      padding-left: 15px;
+
+      .row {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, .49);
+
+    &.scrolled:not(:hover) {
+      background: rgba(196, 60, 69, .88);
+    }
+  }
+
+  &.scrolled {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #c43c45;
+  }
+
+  .btn-search.btn-link {
+    background: #f30724;
+  }
+
+  .col-image {
+    width: 100px;
+    max-width: none;
+    min-width: 100px;
+
+    img {
+      height: 52px;
+      width: 71px;
+      margin-top: 5px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .col-image {
+      max-width: 250px;
+      min-width: 250px;
+
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  .btn {
+    padding: 2px 5px;
+    text-align: center;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    position: relative;
+    font-weight: 400;
+    border: 1px transparent solid;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: .75rem;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    svg {
+      transition: .2s ease-in;
+    }
+
+    &:hover,
+    &.active {
+      color: #fff;
+      text-decoration: none;
+
+      svg {
+        transform: scale(1.3) translateX(-2px);
+      }
+    }
+
+    &.active {
+      box-shadow: -1px -1px 1px 1px rgba(255, 255, 255, .1);
+      background: rgba(255, 255, 255, .3);
+    }
+
+    .badge {
+      font-size: 12px;
+      font-weight: normal;
+      padding: 1px 5px;
+      color: #000;
+      background: #fff;
+      border: 1px #fff solid;
+      border-radius: 4px;
+      z-index: 10;
+      position: relative;
+      left: 2px;
+      top: -4px;
+      margin-right: -2px;
+    }
+
+    span {
+      font-size: .8rem;
+      display: inline-block;
+      line-height: 1.8rem;
+      vertical-align: top;
+
+      @media (min-width: 800px) {
+        padding-left: .5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}

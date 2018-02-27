@@ -1,0 +1,178 @@
+// Shared Config
+@import 'init';
+
+// Partial import of Twitter Bootstrap
+@import 'vendors/bootstrap';
+
+// General typo & general React transitions
+@import 'general/typo';
+@import 'general/transitions';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// General components
+@import 'components/entity-teaser';
+
+// Other vendors
+@import 'vendors/slick-theme';
+
+// Mixed
+
+@keyframes blinker {
+  from { opacity: .2; }
+  to { opacity: .8; }
+}
+
+.dummy {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+  animation-duration: .7s;
+
+  .text-muted {
+    color: #eee !important;
+    font-size: inherit;
+  }
+}
+
+.channel-hero {
+  position: fixed;
+  height: 300px;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, .2);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:after {
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, transparent 1rem, #fff 100%);
+    height: 100%;
+    width: 100%;
+    content: '';
+  }
+}
+
+.nav-tabs {
+  font-size: 1.6rem;
+}
+
+.headline-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: .5rem;
+
+  &:before {
+    height: 2px;
+    width: 110%;
+    content: '';
+    background: #c43c45;
+    display: block;
+    bottom: 40%;
+    position: absolute;
+    z-index: 4;
+  }
+
+  h2 {
+    font-size: 400%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    span.title {
+      z-index: 5;
+      color: darkgrey;
+      font-size: 5rem;
+      margin-left: 3rem;
+      position: relative;
+    }
+
+    span.sub-title {
+      color: #555;
+      position: relative;
+      font-size: 80%;
+      top: -2.25rem;
+      font-weight: lighter;
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+
+  + .headerline-container-more-link {
+    margin-top: 3rem;
+  }
+}
+
+.slick-disabled {
+  opacity: .5;
+}
+
+.slick-prev,
+.slick-next {
+  background: transparent !important;
+
+  &:before {
+    color: #222;
+  }
+}
+
+.image-slider {
+  padding-bottom: 4rem;
+
+  + .image-slider {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-top: 2px #eee solid;
+    padding-top: 2rem;
+  }
+}
+
+.special {
+  background: rgba(0, 0, 0, .05);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+  padding-bottom: 3rem !important;
+  margin-bottom: 0 !important;
+}
+
+body.loading {
+  .loading-indicator {
+    opacity: 1;
+
+    &:before {
+      animation: loading 1.5s linear;
+    }
+  }
+}
+
+.loading-indicator {
+  opacity: 0;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  z-index: 200;
+  overflow: hidden;
+  background-color: rgba($color: #fff, $alpha: .4);
+
+  &:before{
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 5px;
+    background-color: #29d;
+  }
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}

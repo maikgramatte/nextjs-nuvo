@@ -1,0 +1,105 @@
+.main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  width: 300px;
+}
+
+.main-menu li {
+  list-style: none;
+  padding: 0;
+}
+
+.main-menu li a {
+  color: #fff;
+  display: block;
+  transition: .2s;
+  margin: 0;
+  position: relative;
+  padding: .5rem 1rem .25rem;
+  margin-bottom: .1rem;
+  border-right: 10px transparent solid;
+}
+
+.main-menu li a.active,
+.main-menu li a:hover {
+  text-decoration: none;
+  padding: .5rem 1.5rem .25rem;
+  background: rgba(138, 127, 127, .3);
+  border-right-color: #bdc3c7;
+}
+
+.main-menu li a.active {
+  border-right-color: Red;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 3rem 0 0 0;
+  font-size: 1.15em;
+}
+
+.bm-menu h2 {
+  font-size: 1rem;
+  text-align: right;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: #eee;
+  color: #373a47;
+  padding: .5rem;
+  margin-top: 1rem;
+  width: 300px;
+}
+
+.bm-menu hr {
+  width: 300px;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+}
+
+.bm-menu div.small {
+  padding: .5rem;
+  width: 300px;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, .3);
+}

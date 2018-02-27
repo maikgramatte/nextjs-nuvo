@@ -1,0 +1,21 @@
+
+footer {
+  color: #fff;
+  background: #373a47;
+  z-index: 2;
+  width: 100%;
+
+  > div {
+    padding: 2rem 0;
+    font-size: small;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}

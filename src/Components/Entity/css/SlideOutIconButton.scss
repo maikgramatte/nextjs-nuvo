@@ -1,0 +1,35 @@
+// Slideout Button SCSS
+@import '../../../../Scss/init';
+
+.btn-link.btn-link-hover {
+  padding: 2px 5px;
+  position: relative;
+
+  span {
+    width: 1px;
+    position: absolute;
+    min-width: 1px;
+    overflow: hidden;
+    opacity: 0;
+    display: inline-block;
+    transition: opacity .3s ease-in-out;
+    vertical-align: bottom;
+  }
+
+  &:hover {
+    span {
+      position: absolute;
+      opacity: 1;
+      width: auto;
+      right: 26px;
+      top: -1px;
+      z-index: 10;
+      display: block;
+      background: #fff;
+      padding: 2px 8px;
+      font-size: small;
+      line-height: 1.7rem;
+      color: #333;
+    }
+  }
+}

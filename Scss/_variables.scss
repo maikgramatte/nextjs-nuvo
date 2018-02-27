@@ -1,0 +1,25 @@
+/**
+ * Bootstrap overwrites
+ * Please consider overwriting Bootstrap variables, instead of overwriting
+ * bootstrap components
+ * "~bootstrap/scss/variables";
+ */
+
+$primary: #ce2d2d;
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-serif: "Nunito", Times, serif;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+h1,
+h2 {
+  font-family: $font-family-serif !important;
+}
+
+h3,
+h4 {
+  font-family: $font-family-sans-serif !important;
+  font-weight: 600;
+}

@@ -1,0 +1,22 @@
+// General typo
+h1 {
+  font-weight: 100;
+}
+
+body {
+  background: #373a47;
+}
+
+main {
+  background: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 3;
+  z-index: 10;
+  min-height: 30rem;
+
+  .container-fluid {
+    max-width: 1400px;
+  }
+}
